@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Погода</string>
+    <string name="city_string">Ваш город</string>
+    <string-array name="cityNames">
+        <item>Москва</item>
+        <item>Лондон</item>
+        <item>Ульяновск</item>
+        <item>Казань</item>
+        <item>Саранск</item>
+        <item>Санкт-Петербург</item>
+    </string-array>
+</resources>
