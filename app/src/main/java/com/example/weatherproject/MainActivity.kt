@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
     private lateinit var user_result: TextView
     private lateinit var user_spinner: Spinner
+    private lateinit var temperature_view: TextView
     val cities = mapOf("Москва" to "Moscow", "Лондон" to "London", "Ульяновск" to "Ulyanovsk",
         "Казань" to "Kazan'", "Саранск" to "Saransk", "Санкт-Петербург" to "Saint Petersburg",
         "Минск" to "Minsk", "Киев" to "Kiev", "Париж" to "Paris", "Нью-Йорк" to "New York")
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
         user_result = findViewById(R.id.resultView)
         user_spinner = findViewById(R.id.spinner)
+        temperature_view = findViewById(R.id.temperatureView)
 
         ArrayAdapter.createFromResource(this, R.array.cityNames, android.R.layout.simple_spinner_item
         ).also {
@@ -56,8 +58,11 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
                 val main = JSONObject(apiResponse).getJSONObject("main")
                 val temp = main.getString("temp")
 
-                val result_string: String = "$city\nТемпература: $temp°C\n$desc"
+                val pre_string: String = "$temp°C"
+                val result_string: String = desc
                 user_result.text = result_string
+                temperature_view.text = pre_string
+
             }
         }
 
