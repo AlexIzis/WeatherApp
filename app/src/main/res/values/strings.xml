@@ -8,5 +8,9 @@
         <item>Казань</item>
         <item>Саранск</item>
         <item>Санкт-Петербург</item>
+        <item>Минск</item>
+        <item>Киев</item>
+        <item>Париж</item>
+        <item>Нью-Йорк</item>
     </string-array>
 </resources>
