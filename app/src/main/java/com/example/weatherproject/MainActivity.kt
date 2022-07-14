@@ -14,6 +14,7 @@ import java.util.*
 
 class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
+    //блок обьявления переменных
     private lateinit var user_result: TextView
     private lateinit var user_spinner: Spinner
     private lateinit var temperature_view: TextView
